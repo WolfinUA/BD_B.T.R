@@ -1,0 +1,227 @@
+tags:
+  list:
+    eating_places: &eating_places
+      amenity:
+        - bar
+        - biergarten
+        - cafe
+        - fast_food
+        - food_court
+        - ice_cream
+        - pub
+        - restaurant
+
+    kindergarten: &kindergarten
+      amenity:
+        - kindergarten
+
+    school: &school
+      amenity:
+        - school
+        - library
+
+    college: &college
+      amenity:
+        - college
+        - university
+        - library
+
+    public_places: &public_places
+      amenity:
+        - arts_centre
+        - cinema
+        - community_centre
+        - nightclub
+        - planetarium
+        - social_centre
+        - studio
+        - theatre
+        - casino
+        - internet_cafe
+
+    public_outdoor_places: &public_outdoor_places
+      amenity:
+        - fountain
+        - bbq
+        - bench
+
+
+#    prison: &prison
+#      amenity:
+#        - prison
+#
+#    elder_accommodation: &elder_accommodation
+#      amenity:
+#        - nursing_home
+#        - monastery
+
+    public_services: &public_services
+      amenity:
+        - bank
+        - clinic
+        - hospital
+        - pharmacy
+        - post_office
+        - police
+        - townhall
+        - veterinary
+        - fire_station
+
+    housing: &housing
+      building:
+        - apartments
+        - bungalow
+        - cabin
+        - detached
+        - dormitory
+        - farm
+        - hotel
+        - house
+        - houseboat
+        - semidetached_house
+        - static_caravan
+        - terrace
+        - stilt_house
+        - trullo
+
+    commercial: &commercial
+      building:
+        - commercial
+        - industrial
+        - office
+        - supermarket
+        - warehouse
+        - construction
+        - government
+
+    religious: &religious
+      building:
+        - religious
+
+    civil: &civil
+      building:
+        - bakehouse
+        - museum
+
+    technical: &technical
+      building:
+        - digester
+        - silo
+
+    emergency: &emergency
+      emergency:
+        - lifeguard
+
+    craft_shops: &craft_shops
+      craft: true
+
+    historic_sites: &historic_sites
+      historic: true
+
+    short_time_leisure: &short_time_leisure
+      leisure:
+        - amusement_arcade
+        - dance
+        - escape_game
+        - fitness_centre
+        - dog_park
+        - fitness_station
+        - horse_riding
+        - ice_rink
+        - miniature_golf
+        - park
+        - pitch
+        - stadium
+        - sports_centre
+        - swimming_pool
+        - track
+
+    long_time_leisure: &long_time_leisure
+      leisure:
+        - adult_gaming_centre
+        - beach_resort
+        - fire_pit
+        - fishing
+        - garden
+        - marina
+        - nature_reserve
+        - swimming_area
+        - water_park
+
+#    military_education: &military_education
+#      military:
+#        - military
+#
+#    military_workplace: &military_workplace
+#      military:
+#        - base
+#        - obstacle_course
+#        - office
+#        - range
+#
+#    military_home: &military_home
+#      military:
+#        - barracks
+
+    work_offices: &work_offices
+      office: true
+
+    shops_visit: &shops_visit
+      shop: true
+
+    sport_activities: &sport_activities
+      sport: true
+
+    tourist_attraction: &tourist_attraction
+      tourism: true
+
+  selected:
+    home:
+#      - *prison
+#      - *elder_accommodation
+      - *housing
+
+    work:
+      - *eating_places
+      - *public_places
+      - *public_services
+      - *commercial
+      - *religious
+      - *civil
+      - *technical
+#      - *emergency
+      - *craft_shops
+      - *work_offices
+      - *shops_visit
+
+    kindergarten:
+      - *kindergarten
+
+    school:
+        - *school
+
+    college:
+        - *college
+
+    weekday_second_activity:
+      - *eating_places
+      - *public_places
+      - *public_outdoor_places
+      - *craft_shops
+      - *short_time_leisure
+      - *shops_visit
+      - *sport_activities
+      - *civil
+
+    weekend_activity:
+      - *eating_places
+      - *public_places
+      - *public_outdoor_places
+      - *short_time_leisure
+      - *shops_visit
+      - *sport_activities
+      - *civil
+      - *religious
+      - *historic_sites
+      - *long_time_leisure
+      - *tourist_attraction

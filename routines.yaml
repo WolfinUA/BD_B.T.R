@@ -1,0 +1,217 @@
+places:
+  home:
+    tag: &home 'home' # constant
+    type: home
+    scope: local
+
+  kindergarten:
+    tag: &kindergarten 'kindergarten' # constant
+    type: single
+    scope: local
+
+  school:
+    tag: &school 'school' # constant
+    type: single
+    scope: local
+
+  college:
+    tag: &college 'college' # constant
+    type: single
+    scope: local
+
+  work:
+    tag: &work 'work' # constant - LOCAL -raion level
+    type: single
+    scope: local
+
+  weekend_activity:
+    tag: &weekend_ap 'weekend_activity' # random list value - GLOBAL - oblast level
+    type: multiple
+    amount: 6
+    scope: global
+
+  weekday_second_activity:
+    tag: &secondary_ap 'weekday_second_activity' # random list value
+    type: multiple
+    amount: 6
+    scope: global
+
+routines:
+  newborn:
+    # Newborns are not expected to have a routine. They will sleep, eat, and poop whenever they want. © Github Copilot
+    weekday:
+      - ~
+
+    weekend:
+      - ~
+
+  preschooler:
+    # Description: Aged 3-6
+    weekday:
+      - 8: *kindergarten
+        17: *home
+
+    weekend:
+      - ~
+
+      - 13: *secondary_ap
+        14: *home
+
+      - 11: *weekend_ap
+        13: *home
+
+  kid:
+    # Description: Aged 6-18
+    weekday:
+      - 8: *school
+        16: *home
+
+      - 8: *school
+        16: *secondary_ap
+        17: *home
+
+    weekend:
+      - 12: *weekend_ap
+        18: *home
+
+      - 12: *secondary_ap
+        14: *secondary_ap
+        17: *home
+
+      - 11: *weekend_ap
+        15: *secondary_ap
+        17: *home
+
+  teenager:
+    # Description: Aged 18-21
+    weekday:
+      - 8: *college
+        16: *home
+
+      - 8: *college
+        14: *secondary_ap
+        18: *home
+
+      - 12: *secondary_ap
+        13: *home
+
+    weekend:
+      - 12: *weekend_ap
+        17: *secondary_ap
+        19: *home
+
+      - 10: *weekend_ap
+        15: *secondary_ap
+        17: *secondary_ap
+        19: *home
+
+      - 11: *secondary_ap
+        14: *secondary_ap
+        17: *home
+
+      - 11: *weekend_ap
+        15: *home
+
+      - 10: *secondary_ap
+        12: *home
+        14: *secondary_ap
+        16: *home
+
+      - 9: *weekend_ap
+        17: *home
+
+      - 10: *weekend_ap
+        14: *weekend_ap
+        19: *home
+
+      - ~
+
+  adult:
+    # Description: Aged 21-65
+    weekday:
+      - 8: *work
+        18: *secondary_ap
+        20: *home
+
+      - 8: *work
+        18: *home
+
+      - 8: *work
+        17: *secondary_ap
+        18: *secondary_ap
+        19: *home
+
+    weekend:
+      - 12: *weekend_ap
+        17: *secondary_ap
+        19: *home
+
+      - 10: *weekend_ap
+        14: *weekend_ap
+        19: *home
+
+      - 10: *weekend_ap
+        15: *secondary_ap
+        17: *secondary_ap
+        19: *home
+
+      - 11: *weekend_ap
+        15: *home
+
+      - 10: *secondary_ap
+        12: *home
+        14: *secondary_ap
+        16: *home
+
+      - 9: *weekend_ap
+        17: *home
+
+      - ~
+
+      - 11: *secondary_ap
+        14: *secondary_ap
+        17: *home
+
+  elderly:
+    # Description: Aged 65+
+    weekday:
+      - 10: *secondary_ap
+        13: *secondary_ap
+        14: *secondary_ap
+        17: *home
+
+      - 12: *secondary_ap
+        14: *home
+
+      - 11: *weekend_ap
+        15: *home
+
+      - 10: *secondary_ap
+        12: *home
+        15: *secondary_ap
+        16: *home
+
+      - 8: *secondary_ap
+        11: *secondary_ap
+        14: *home
+
+    weekend:
+      - 8: *secondary_ap
+        11: *secondary_ap
+        14: *secondary_ap
+        16: *home
+
+      - 12: *secondary_ap
+        14: *home
+
+      - 11: *weekend_ap
+        18: *home
+
+      - 10: *secondary_ap
+        12: *home
+        15: *secondary_ap
+        18: *home
+
+      - 8: *secondary_ap
+        11: *secondary_ap
+        14: *home

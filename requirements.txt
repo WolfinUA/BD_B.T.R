@@ -1,0 +1,5 @@
+mesa==2.1
+mesa-geo~=0.7.1
+
+# conda create -n ox -c conda-forge --strict-channel-priority osmnx
+# /opt/miniconda3/envs/ox/bin/pip install -r requirements.txt
